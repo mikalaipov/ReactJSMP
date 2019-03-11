@@ -1,0 +1,22 @@
+{
+  "name": "reactjsmp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "express.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nickolay-P/ReactJSMP.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nickolay-P/ReactJSMP/issues"
+  },
+  "homepage": "https://github.com/Nickolay-P/ReactJSMP#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
