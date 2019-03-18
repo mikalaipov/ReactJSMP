@@ -1,22 +1,39 @@
 {
-  "name": "reactjsmp",
+  "name": "reactjsm",
   "version": "1.0.0",
   "description": "",
-  "main": "express.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "main": "index.js",
+  "jest": {
+    "verbose": true
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Nickolay-P/ReactJSMP.git"
+  "scripts": {
+    "dev": "webpack-dev-server --mode development --open",
+    "build": "webpack --mode development",
+    "build:prod": "webpack --mode production",
+    "test": "jest"
   },
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Nickolay-P/ReactJSMP/issues"
+  "devDependencies": {
+    "jest": "^24.5.0",
+    "path": "^0.12.7",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.3.0",
+    "webpack-dev-server": "^3.2.1",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.5",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-3": "^6.24.1"
   },
-  "homepage": "https://github.com/Nickolay-P/ReactJSMP#readme",
   "dependencies": {
-    "express": "^4.16.4"
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.3.4",
+    "@babel/preset-env": "^7.3.4",
+    "@babel/preset-react": "^7.0.0",
+    "react": "^16.8.4",
+    "react-dom": "^16.8.4",
+    "react-redux": "^6.0.1",
+    "react-router": "^4.4.0",
+    "redux": "^4.0.1"
   }
 }
