@@ -1,6 +1,6 @@
 
 import ReactDOM from "react-dom";
-import {myElement} from "./components/App.js";
+import {myElement} from "./src/components/Wrapper";
 
 ReactDOM.render(myElement, document.getElementById("root"));
-console.log({myElement})
+console.log("Nice, yeah!") 

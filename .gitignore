@@ -75,9 +75,7 @@ jspm_packages/
 .env.development.local
 .env.test.local
 .env.production.local
-*.css
-
-public/access_token.json
+*public/access_token.json
 public/app/stc/settings.json
 
 yarn.lock
