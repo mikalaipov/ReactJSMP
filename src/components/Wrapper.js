@@ -1,7 +1,5 @@
-
 import React, { Component } from 'react';
 
-import ".././styles.css"
 import {Header} from "./header/header.js"
 import {SortPanel} from "./sortPanel/sortPanel.js"
 import {Main} from "./main/main.js"
@@ -21,10 +19,6 @@ export class Wrapper extends Component {
   }
 }
 
-export const myElement = (
+export const App = (
     <Wrapper />
 );
-
-export default function result() {
-  return (myElement ? true : false)
-}

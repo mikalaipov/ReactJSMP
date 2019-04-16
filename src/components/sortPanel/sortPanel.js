@@ -1,20 +1,14 @@
-import "../.././styles.css"
+
 import React, { Component } from 'react';
-
-
-import {FoundLabel} from "./foundLabel/foundLabel.js"
-import {ReleaseButton} from "./releaseButton/releaseButton.js"
-import {RatingButton} from "./ratingButton/ratingButton.js"
-
 
 export class SortPanel extends Component {
     render() {
       return (
         <div className="sortPanel">
-          <FoundLabel />
+          <div className="foundLabel">7 movie found</div>
           <div className="sortByLabel">Sort by</div>
-          <ReleaseButton />
-          <RatingButton />
+          <button className="releaseButton">release date</button>
+          <button className="ratingButton">rating</button>
         </div>
       );
     }

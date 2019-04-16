@@ -4,14 +4,14 @@ const path = require('path');
 
 
 module.exports = {
-    entry: './index.js',
+    entry: './src/index.js',
     output: {
         path: path.join(__dirname, './dist'),
         filename: 'index_bundle.js'
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: "./index.html",
+            template: "./public/index.html",
             filename: "./index.html"
         }),
         new MiniCssExtractPlugin("bundle.css")
