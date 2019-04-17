@@ -1,11 +1,17 @@
 
 
 import React from 'react';
-import renderer from 'react-test-renderer';
+import {shallow} from 'enzyme'
 import {Header} from './Header.js';
+import { configure } from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
+
+configure({ adapter: new Adapter() });
 
 
 it('Header rendered correctly', () => {
-  const AppComponent = renderer.create(<Header />).toJSON();
+  const AppComponent = shallow(
+    <Header />
+  );
   expect(AppComponent).toMatchSnapshot();
 });
