@@ -1,17 +1,19 @@
 import React, { Component } from 'react';
+import { SearchPanel } from '../searchPanel/searchPanel';
+import { SearchResultsContainer } from '../outputContainer/outputContainer';
 
-import {Search} from "./search/search.js"
-import {FilmInfo} from "./filmInfo/filmInfo.js"
-export class Header extends Component {
-    render() {
-      return (
-        <div className="header">
-            <Search />
+export class PageHeader extends Component {
+  render() {
+    return (
+      <header>
+        <div className='header'>
+          <div className='container'>
+            <h1 className='logo'>netflixroulette</h1>
+            <SearchPanel />
+          </div>
         </div>
-        // <div className="header">
-        //      <FilmInfo />    
-        // </div>
-      );
-    }
+        <SearchResultsContainer />
+      </header>
+    );
   }
-
+}

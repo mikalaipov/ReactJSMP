@@ -1,12 +1,9 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-
-export class Footer extends Component {
-    render() {
-      return (
-        <div className="footer">
-          <div className="rouletteLabel">netflixroulette</div>
-        </div>
-      );
-    }
-  }
+export const PageFooter = (props) => {
+  return (
+    <footer className='footer'>
+      <h1 className='logo'>netflixroulette</h1>
+    </footer>
+  );
+};

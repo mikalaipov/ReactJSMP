@@ -1,24 +1,27 @@
 import React, { Component } from 'react';
-
-import {Header} from "./header/header.js"
-import {SortPanel} from "./sortPanel/sortPanel.js"
-import {Main} from "./main/main.js"
-import {Footer} from "./footer/footer.js"
-
+import { PageHeader } from './header/header';
+import { PageFooter } from './footer/footer';
+import { Main } from './main/main';
+import { Provider } from 'react-redux';
+import { store, persistor } from '../store/store';
+import { PersistGate } from 'redux-persist/lib/integration/react';
 
 export class Wrapper extends Component {
   render() {
     return (
-      <div className="wrapper">
-        <Header />
-        <SortPanel />
-        <Main />
-        <Footer />
+      <div>
+        <Provider store={store}>
+          <PersistGate persistor={persistor}>
+            <div className='container'>
+              <PageHeader />
+              <div className='container__content'>
+                <Main/>
+              </div>
+              <PageFooter />
+            </div>
+          </PersistGate>
+        </Provider>
       </div>
     );
   }
 }
-
-export const App = (
-    <Wrapper />
-);
