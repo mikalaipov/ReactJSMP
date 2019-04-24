@@ -1,14 +1,14 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { toggle } from '../toggle/toggle';
-import { setSortingBy } from '../../actions/actions';
-import { SEARCHING_OPTIONS, MOVIE_PARAMS } from '../../store/constants';
+import React, {Component} from 'react';
+import {connect} from 'react-redux';
+import {Toggle} from '../Toggle/Toggle';
+import {setSortingBy} from '../../actions/actions';
+import {SEARCHING_OPTIONS, MOVIE_PARAMS} from '../../store/constants';
 
 
 export class SearchResults extends Component {
   setSortingByHandler = (typeName) => {
     this.props.setSortingBy(typeName);
-  }
+ }
 
   render() {
     return (
@@ -18,7 +18,7 @@ export class SearchResults extends Component {
         </div>
         <div className='search-results__sorting'>
           <div className='search-results__sorting-header'>Sort by</div>
-          <toggle
+          <Toggle
             options={['release date', 'rating']}
             default={this.props.searchBy}
             isLight={true}
@@ -26,7 +26,7 @@ export class SearchResults extends Component {
         </div>
       </div>
     );
-  }
+ }
 }
 
 const props = (state) => {
@@ -39,12 +39,12 @@ const props = (state) => {
     case MOVIE_PARAMS.RATING:
       searchBy = SEARCHING_OPTIONS.RATING;
       break;
-  }
+ }
 
   return {
     totalMovies: state.movies.total,
     searchBy,
-  };
+ };
 };
 
 const propsRetrieved = (dispatch) => ({
@@ -58,9 +58,9 @@ const propsRetrieved = (dispatch) => ({
       case SEARCHING_OPTIONS.RATING:
         fieldName = MOVIE_PARAMS.RATING;
         break;
-    }
+   }
     dispatch(setSortingBy(fieldName));
-  },
+ },
 });
 
 export const SearchResultsContainer = connect(props, propsRetrieved)(SearchResults);

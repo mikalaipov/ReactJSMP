@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
-import { PageHeader } from './header/header';
-import { PageFooter } from './footer/footer';
-import { Main } from './main/main';
-import { Provider } from 'react-redux';
-import { store, persistor } from '../store/store';
-import { PersistGate } from 'redux-persist/lib/integration/react';
+import React, {Component} from 'react';
+import {PageHeader} from './header/header';
+import {PageFooter} from './footer/footer';
+import {Main} from './main/main';
+import {Provider} from 'react-redux';
+import {store, persistor} from '../store/store';
+import {PersistGate} from 'redux-persist/lib/integration/react';
 
 export class Wrapper extends Component {
   render() {
@@ -23,5 +23,5 @@ export class Wrapper extends Component {
         </Provider>
       </div>
     );
-  }
+ }
 }

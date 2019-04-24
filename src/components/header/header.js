@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-import { SearchPanel } from '../searchPanel/searchPanel';
-import { SearchResultsContainer } from '../outputContainer/outputContainer';
+import React, {Component} from 'react';
+import {SearchPanel} from '../searchPanel/searchPanel';
+import {SearchResultsContainer} from '../outputContainer/outputContainer';
 
 export class PageHeader extends Component {
   render() {
@@ -15,5 +15,5 @@ export class PageHeader extends Component {
         <SearchResultsContainer />
       </header>
     );
-  }
+ }
 }

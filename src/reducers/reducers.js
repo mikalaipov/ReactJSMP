@@ -1,7 +1,7 @@
-import { REHYDRATE } from 'redux-persist';
-import { ACTION } from '../store/constants';
+import {REHYDRATE} from 'redux-persist';
+import {ACTION} from '../store/constants';
 
-export const movies = (state = defaultState, { type, movies = [], total = 0, offset = 0, limit = 0 }) => {
+export const movies = (state = defaultState, {type, movies = [], total = 0, offset = 0, limit = 0}) => {
   switch (type) {
     case ACTION.DATA_RETRIVED:
       return {
@@ -9,10 +9,10 @@ export const movies = (state = defaultState, { type, movies = [], total = 0, off
         total,
         offset,
         limit,
-      };
+     };
     default:
       return state;
-  }
+ }
 };
 
 export const persistReducer = (state = {}, action) => {
@@ -21,34 +21,34 @@ export const persistReducer = (state = {}, action) => {
       return Object.assign({}, state, action.payload);
     default:
       return state;
-  }
+ }
 };
 
-export const filterSearch = (state = 'title', { type, name }) => {
+export const filterSearch = (state = 'title', {type, name}) => {
   switch (type) {
     case ACTION.FILTER_TYPE_SETTED:
       return name;
     default:
       return state;
-  }
+ }
 };
 
-export const search = (state = '', { type, value }) => {
+export const search = (state = '', {type, value}) => {
   switch (type) {
     case ACTION.FILTERED:
       return value;
     default:
       return state;
-  }
+ }
 };
 
-export const searchBy = (state = 'rating', { type, typeName }) => {
+export const searchBy = (state = 'rating', {type, typeName}) => {
   switch (type) {
     case ACTION.SORTED:
       return typeName;
     default:
       return state;
-  }
+ }
 };
 
 const defaultState = {

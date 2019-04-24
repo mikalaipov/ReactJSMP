@@ -1,27 +1,27 @@
-import React, { Component } from 'react';
-import { ticket } from '../toggle/toggle';
-import { connect } from 'react-redux';
-import { retriveMovieInfo } from '../../actions/actions';
+import React, {Component} from 'react';
+import {ticket} from '../Toggle/Toggle';
+import {connect} from 'react-redux';
+import {retriveMovieInfo} from '../../actions/actions';
 
 export class Movie extends Component {
   constructor(props) {
     super(props);
-  }
+ }
 
   componentDidMount() {
     if (!this.props.movies || this.props.movies.length === 0) {
       this.props.fetchData();
-    }
-  }
+   }
+ }
 
   render() {
     if (this.props.hasErrored) {
       return <h1>Ooops, there is an error</h1>;
-    }
+   }
 
     if (this.props.isLoading) {
       return <span>loading...</span>;
-    }
+   }
 
     return (
       <div className='Main'>
@@ -30,7 +30,7 @@ export class Movie extends Component {
         ))}
       </div>
     );
-  }
+ }
 }
 
 const props = (state) => ({

@@ -1,13 +1,13 @@
-import React, { Component } from 'reacte_modules/react';
-import { Button } from '../button/button';
-import { toggle } from '../toggle/toggle';
-import { connect } from 'react-reduxles/react-redux';
-import { retriveMovieInfo, setSearchType, setSearchString } from '../../actions/actions';
+import React, {Component} from 'react';
+import {Button} from '../button/button';
+import {Toggle} from '../Toggle/Toggle';
+import {connect} from 'react-redux';
+import {retriveMovieInfo, setSearchType, setSearchString} from '../../actions/actions';
 
 export class SearchInput extends Component {
   constructor(props) {
     super(props);
-  }
+ }
 
   render() {
     return (
@@ -20,8 +20,8 @@ export class SearchInput extends Component {
           <span className='search-input__text'>
             Search by
           </span>
-          <div className='search-input__toggle'>
-            <toggle options={['title', 'genre']} default='title' onChange={this.typeChangeHandler.bind(this)} />
+          <div className='search-input__Toggle'>
+            <Toggle options={['title', 'genre']} default='title' onChange={this.typeChangeHandler.bind(this)} />
           </div>
           <div className='search-input__submit'>
             <Button text='Search' isActive={true} width='100px' onClick={this.onSubmit.bind(this)} />
@@ -29,15 +29,15 @@ export class SearchInput extends Component {
         </div>
       </div>
     );
-  };
+ };
 
   typeChangeHandler = (str) => {
     this.props.setSearchType(str);
-  };
+ };
 
   inputHandler = (e) => {
     this.props.setSearchValue(e.target.value);
-  }
+ }
 
   onSubmit = () => {
     this.props.fetchData({
@@ -45,8 +45,8 @@ export class SearchInput extends Component {
       filterSearch: this.props.filterSearch,
       searchBy: this.props.searchBy,
       sortOrder: 'asc',
-    });
-  }
+   });
+ }
 
 }
 

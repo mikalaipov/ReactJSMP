@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { Input } from '../searchInput/searchInput';
+import React, {Component} from 'react';
+import {Input} from '../searchInput/searchInput';
 
 
 export class SearchPanel extends Component {
@@ -10,5 +10,5 @@ export class SearchPanel extends Component {
         <Input />
       </div>
     );
-  }
+ }
 }
